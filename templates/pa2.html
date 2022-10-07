@@ -1,0 +1,23 @@
+{% extends "design.html" %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/effect.css') }}">{% endblock %}
+{% block script %}<script src="/static/js/pa2.js" defer></script>{% endblock %}
+{% block design %}{% endblock %}
+{% block content %}
+
+
+<h1>Years</h1>
+
+<div class="flex-container">
+    {% for data in datas %}
+  <div class="item" id="{{ data.rating }}">
+      <span>{{ data.year }}</span><br>
+      <span>{{ data.rating }}</span><br>
+      <span>{{ data.shows }} shows</span>
+  </div>
+    {% endfor %}
+
+</div>
+
+
+{% endblock %}

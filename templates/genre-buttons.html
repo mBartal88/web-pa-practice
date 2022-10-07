@@ -1,0 +1,18 @@
+{% extends "design.html" %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/effect.css') }}">{% endblock %}
+{% block script %}<script src="/static/js/g.js" defer></script>{% endblock %}
+{% block design %}{% endblock %}
+{% block content %}
+
+<div class="card">
+    {% for i in genres %}
+    <button class="buttons" id="{{ i.name }}">{{ i.name }}</button>
+    {% endfor %}
+
+    <div class="show-div"></div>
+</div>
+
+
+
+{% endblock %}

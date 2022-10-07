@@ -1,0 +1,35 @@
+{% extends "design.html" %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/effect3.css') }}">{% endblock %}
+{% block script %}<script src="/static/js/pa6.js" defer></script>{% endblock %}
+{% block design %}{% endblock %}
+{% block content %}
+
+    <div class="card">
+        <h1>Actors</h1>
+
+        <form action="/pa6">
+            <label for="date">Actors who were born after -></label>
+            <input type="number" id="date" name="date" placeholder="Year" min="1940" max="2021"><span>-01-01</span>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="flex-container">
+        {% for actor in actors %}
+        <div class="flex-card">
+        <span class="name">{{ actor.name }}</span><br>
+        <span class="birthday">{{ actor.birthday }}</span><br>
+        <span>Played {{ actor.characters }} character(s)</span><br>
+        <span>Average rating: </span><span class="rating">{{ actor.rating }}</span>
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+
+
+
+
+{% endblock %}

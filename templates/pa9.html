@@ -1,0 +1,18 @@
+{% extends "design.html" %}
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/pa9.css') }}">{% endblock %}
+{% block script %}<script src="/static/js/pa9.js" defer></script>{% endblock %}
+{% block design %}{% endblock %}
+
+{% block content %}
+
+    <div class="card">
+        <label for="search">Search by character names</label><br>
+        <input id="search" name="search-phrase" type="text" placeholder="Type here">
+    </div>
+
+    <div class="card">
+        <ul id="character-list"></ul>
+    </div>
+
+{% endblock %}
+

@@ -1,0 +1,30 @@
+{% extends "design.html" %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/effect.css') }}">{% endblock %}
+{% block script %}<script src="/static/js/pa8.js" defer></script>{% endblock %}
+{% block design %}{% endblock %}
+{% block content %}
+
+
+<h1>Actors of shows released in {{ year }}</h1>
+
+<div class="card">
+
+    <ol>
+        {% for data in datas %}
+        <li>
+            <span id="{{ data.was_older }}">{{ data.name }}</span>
+            {% if data.age_then != None %}
+            <span id="age_then" hidden>{{ data.age_then }}</span>
+                {% else %}
+            <span id="age_then" hidden>unknown</span>
+                {% endif %}
+            <span id="show_age" hidden>{{ data.show_age }}</span>
+        </li>
+        {% endfor %}
+    </ol>
+
+</div>
+
+
+{% endblock %}

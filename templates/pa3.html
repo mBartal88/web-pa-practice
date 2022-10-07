@@ -1,0 +1,31 @@
+{% extends "design.html" %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/effect.css') }}">{% endblock %}
+{% block script %}<script src="/static/js/pa3.js" defer></script>{% endblock %}
+{% block design %}{% endblock %}
+{% block content %}
+
+<div class="card">
+
+    <table class="shows">
+        {% for show in shows %}
+        <tr>
+            <td id="{{ show.title }}">{{ show.title }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <table class="actors">
+        {% for title, names in datas.items() %}
+            {% for name in names %}
+        <tr>
+            <td id="{{ title }}">{{ name }}</td>
+        </tr>
+            {% endfor %}
+        {% endfor %}
+
+    </table>
+
+</div>
+
+{% endblock %}

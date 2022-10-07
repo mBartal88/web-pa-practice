@@ -1,0 +1,22 @@
+{% extends "design.html" %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/effect.css') }}">{% endblock %}
+{% block script %}<script src="/static/js/pa11.js" defer></script>{% endblock %}
+{% block design %}{% endblock %}
+{% block content %}
+
+<div class="card">
+    <label for="genre-selector">Genre</label><br>
+    <select id="genre-selector">
+        {% for genre in genres %}
+        <option value="{{ genre.name }}">{{ genre.name }}</option>
+        {% endfor %}
+    </select>
+    <button id="submit">Submit</button>
+
+    <table id="table">
+        <tbody id="show-container"></tbody>
+    </table>
+</div>
+
+{% endblock %}

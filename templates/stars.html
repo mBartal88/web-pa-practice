@@ -1,0 +1,33 @@
+{% extends "design.html" %}
+
+{% block style %}{% endblock %}
+{% block script %}<script src="/static/js/stars.js" defer></script>{% endblock %}
+{% block design %}{% endblock %}
+{% block content %}
+
+<div class="card">
+<label for="select">Genre:</label>
+{#<input type="text" id="input" placeholder="Type genre">#}
+
+    <select id="selector">
+        {% for genre in genres %}
+        <option value="{{ genre.genres }}">{{ genre.genres }}</option>
+        {% endfor %}
+    </select>
+
+    <button id="button">Send</button>
+
+<div id="list-div">
+
+    <ol id="list">
+        <div id="item-container"></div>
+    </ol>
+
+</div>
+
+
+</div>
+
+
+
+{% endblock %}

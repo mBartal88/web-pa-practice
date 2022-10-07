@@ -1,0 +1,64 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.flex-card {
+  border-radius: 10px;
+  border: solid black;
+  background-color: white;
+  width: 260px;
+  margin: 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.birthday {
+  color: blue;
+}
+
+.rating {
+  background-color: yellow;
+  font-weight: bolder;
+}
+
+.flex-container1 {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: lightgray;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.flex-card1 {
+  border-radius: 10px;
+  border: solid black;
+  background-color: ghostwhite;
+  width: 350px;
+  margin: 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.count {
+  font-weight: bold;
+}
+
+.shows {
+  color: #278bc4;
+}
+
+.even {
+  background-color: lightblue;
+}
+
+.odd {
+  background-color: lightgreen;
+}

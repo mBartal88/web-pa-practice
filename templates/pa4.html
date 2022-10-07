@@ -1,0 +1,25 @@
+{% extends "design.html" %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/effect2.css') }}">{% endblock %}
+{% block script %}<script src="/static/js/pa4.js" defer></script>{% endblock %}
+{% block design %}{% endblock %}
+{% block content %}
+
+<div class="card">
+
+    <input id="input-field" type="text">
+
+    <table id="shows-table"></table>
+
+    <div id="myModal" class="modal">
+
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="content"></p>
+      </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

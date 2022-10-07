@@ -1,0 +1,20 @@
+{% extends "design.html" %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/effect.css') }}">{% endblock %}
+{% block script %}<script src="/static/js/ranger.js" defer></script>{% endblock %}
+{% block design %}{% endblock %}
+{% block content %}
+
+<div class="card">
+    <label for="inputs">Seasons</label><br>
+    <input name="inputs" id="inputs" type="range" max="{{ max }}" value="0"><span id="val"></span>
+
+    {% for show in shows %}
+        <p class="shows" id="{{ show.count }}">{{ show.title }}</p>
+    {% endfor %}
+
+</div>
+
+
+
+{% endblock %}

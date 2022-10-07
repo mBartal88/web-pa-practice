@@ -1,0 +1,28 @@
+{% extends "design.html" %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/effect.css') }}">{% endblock %}
+{% block script %}<script src="../static/js/actor.js" defer></script>{% endblock %}
+{% block design %}{% endblock %}
+{% block content %}
+
+<div class="card">
+
+    <p>Here are the 10 most active actors (they played {{ roles }} characters)</p>
+
+    <ol class="list">
+        {% for actor in range(top_actors|length) %}
+            {% if actor == 0 %}
+            <li>{{ top_actors[actor].name }}<span id="rank">🥇</span></li>
+            {% elif actor == 1 %}
+            <li>{{ top_actors[actor].name }}<span id="rank">🥈</span></li>
+            {% elif actor == 2 %}
+            <li>{{ top_actors[actor].name }}<span id="rank">🥉</span></li>
+            {% else %}
+        <li>{{ top_actors[actor].name }}</li>
+            {% endif %}
+        {% endfor %}
+    </ol>
+
+</div>
+
+{% endblock %}

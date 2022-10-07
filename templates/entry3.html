@@ -1,0 +1,26 @@
+{% extends "design.html" %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/effect.css') }}">{% endblock %}
+{% block script %}{% endblock %}
+{% block design %}{% endblock %}
+{% block content %}
+
+<div class="card">
+    <form action="/pa3">
+    <label for="season">Season</label><br>
+    <input id="season" name="season" type="number">
+    <br>
+    <label for="episode">Episode</label><br>
+    <input id="episode" name="episode" type="number">
+    <br><br>
+    <button type="submit" name="button" value="send">Send</button>
+    </form>
+
+    {% if number[0].number == 0 %}
+        <p>Result: No input</p>
+    {% else %}
+        <p>Result: {{ number[0].number }}</p>
+    {% endif %}
+</div>
+
+{% endblock %}
